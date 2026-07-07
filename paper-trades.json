@@ -1,5 +1,5 @@
 {
-  "balance": 9416.279832237702,
+  "balance": 6266.82867487922,
   "trades": [
     {
       "id": "1782936084896",
@@ -306,54 +306,17 @@
         }
       ],
       "status": "OPEN"
-    }
-  ],
-  "openPositions": [
-    {
-      "id": "1782988274437",
-      "symbol": "ADAUSDT",
-      "type": "LONG",
-      "entryPrice": 0.1586,
-      "quantity": 1261.5221738564585,
-      "positionSize": 200.0774167736343,
-      "stopLoss": 0.1559874,
-      "takeProfit": 0.1629,
-      "entryTime": "2026-07-02T10:31:14.437Z",
-      "confidence": "MEDIUM",
-      "signals": [
-        {
-          "indicator": "EMA",
-          "signal": "BULLISH",
-          "reason": "Price above EMA20 & EMA50 (uptrend)"
-        },
-        {
-          "indicator": "BB",
-          "signal": "BEARISH",
-          "reason": "Price above upper Bollinger Band"
-        },
-        {
-          "indicator": "MACD",
-          "signal": "BULLISH",
-          "reason": "MACD line positive"
-        },
-        {
-          "indicator": "OrderBook",
-          "signal": "BULLISH",
-          "reason": "Bid/Ask ratio 1.20 - More buyers"
-        }
-      ],
-      "status": "OPEN"
     },
     {
-      "id": "1783026305765",
-      "symbol": "OPUSDT",
+      "id": "1783092313728",
+      "symbol": "SUSHIUSDT",
       "type": "LONG",
-      "entryPrice": 0.0984,
-      "quantity": 1992.7926017101834,
-      "positionSize": 196.09079200828205,
-      "stopLoss": 0.0975046,
-      "takeProfit": 0.101,
-      "entryTime": "2026-07-02T21:05:05.765Z",
+      "entryPrice": 0.1623,
+      "quantity": 1237.663619438264,
+      "positionSize": 200.87280543483024,
+      "stopLoss": 0.1604784,
+      "takeProfit": 0.1791,
+      "entryTime": "2026-07-03T15:25:13.728Z",
       "confidence": "MEDIUM",
       "signals": [
         {
@@ -372,16 +335,43 @@
       "status": "OPEN"
     },
     {
-      "id": "1783026306244",
-      "symbol": "PEPEUSDT",
+      "id": "1783092355590",
+      "symbol": "LINKUSDT",
       "type": "LONG",
-      "entryPrice": 0.00000244,
-      "quantity": 78757777.11808048,
-      "positionSize": 192.1689761681164,
-      "stopLoss": 0.00000241516,
-      "takeProfit": 0.0000025,
-      "entryTime": "2026-07-02T21:05:06.244Z",
-      "confidence": "HIGH",
+      "entryPrice": 7.832,
+      "quantity": 25.13474838178417,
+      "positionSize": 196.85534932613362,
+      "stopLoss": 7.808352,
+      "takeProfit": 7.944,
+      "entryTime": "2026-07-03T15:25:55.590Z",
+      "confidence": "MEDIUM",
+      "signals": [
+        {
+          "indicator": "EMA",
+          "signal": "BULLISH",
+          "weight": 2,
+          "reason": "Uptrend confirmed"
+        },
+        {
+          "indicator": "MACD",
+          "signal": "BULLISH",
+          "weight": 1,
+          "reason": "Positive momentum"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "id": "1783093219597",
+      "symbol": "APTUSDT",
+      "type": "LONG",
+      "entryPrice": 0.618,
+      "quantity": 312.1654406789822,
+      "positionSize": 192.91824233961097,
+      "stopLoss": 0.614768,
+      "takeProfit": 0.626,
+      "entryTime": "2026-07-03T15:40:19.597Z",
+      "confidence": "MEDIUM",
       "signals": [
         {
           "indicator": "EMA",
@@ -399,7 +389,344 @@
           "indicator": "OrderBook",
           "signal": "BULLISH",
           "weight": 1.5,
-          "reason": "Bid/Ask 2.03"
+          "reason": "Bid/Ask 1.74"
+        }
+      ],
+      "status": "CLOSED",
+      "exitPrice": 0.613,
+      "exitTime": "2026-07-03T15:41:08.569Z",
+      "closeReason": "STOP_LOSS",
+      "pnl": -1.5608272033949122,
+      "pnlPercent": -0.80906148867314
+    },
+    {
+      "id": "1783093756363",
+      "symbol": "AAVEUSDT",
+      "type": "LONG",
+      "entryPrice": 89.32,
+      "quantity": 2.159505438821575,
+      "positionSize": 192.88702579554305,
+      "stopLoss": 88.822,
+      "takeProfit": 94.75,
+      "entryTime": "2026-07-03T15:49:16.363Z",
+      "confidence": "MEDIUM",
+      "signals": [
+        {
+          "indicator": "EMA",
+          "signal": "BULLISH",
+          "weight": 2,
+          "reason": "Uptrend confirmed"
+        },
+        {
+          "indicator": "MACD",
+          "signal": "BULLISH",
+          "weight": 1,
+          "reason": "Positive momentum"
+        },
+        {
+          "indicator": "OrderBook",
+          "signal": "BULLISH",
+          "weight": 1.5,
+          "reason": "Bid/Ask 1.24"
+        }
+      ],
+      "status": "CLOSED",
+      "exitPrice": 88.8,
+      "exitTime": "2026-07-03T15:58:38.127Z",
+      "closeReason": "STOP_LOSS",
+      "pnl": -1.1229428281872103,
+      "pnlPercent": -0.5821764442454053
+    },
+    {
+      "id": "1783094117961",
+      "symbol": "XRPUSDT",
+      "type": "SHORT",
+      "entryPrice": 1.1214,
+      "quantity": 168.5654407701375,
+      "positionSize": 189.0292852796322,
+      "stopLoss": 1.146288,
+      "takeProfit": 1.1187,
+      "entryTime": "2026-07-03T15:55:17.961Z",
+      "confidence": "MEDIUM",
+      "signals": [
+        {
+          "indicator": "RSI",
+          "signal": "BEARISH",
+          "weight": 2,
+          "reason": "Overbought 75.07"
+        },
+        {
+          "indicator": "EMA",
+          "signal": "BULLISH",
+          "weight": 2,
+          "reason": "Uptrend confirmed"
+        },
+        {
+          "indicator": "BB",
+          "signal": "BEARISH",
+          "weight": 1.5,
+          "reason": "Above upper band"
+        },
+        {
+          "indicator": "MACD",
+          "signal": "BULLISH",
+          "weight": 1,
+          "reason": "Positive momentum"
+        },
+        {
+          "indicator": "OrderBook",
+          "signal": "BEARISH",
+          "weight": 1.5,
+          "reason": "Bid/Ask 0.79"
+        },
+        {
+          "indicator": "L/S Ratio",
+          "signal": "BEARISH",
+          "weight": 2,
+          "reason": "Too many longs"
+        }
+      ],
+      "status": "CLOSED",
+      "exitPrice": 1.1186,
+      "exitTime": "2026-07-03T16:02:52.635Z",
+      "closeReason": "TAKE_PROFIT",
+      "pnl": 0.4719832341563705,
+      "pnlPercent": 0.24968789013732068
+    },
+    {
+      "id": "1783094265510",
+      "symbol": "NEARUSDT",
+      "type": "LONG",
+      "entryPrice": 2.035,
+      "quantity": 91.03130200198504,
+      "positionSize": 185.24869957403956,
+      "stopLoss": 1.958076,
+      "takeProfit": 2.193,
+      "entryTime": "2026-07-03T15:57:45.510Z",
+      "confidence": "MEDIUM",
+      "signals": [
+        {
+          "indicator": "EMA",
+          "signal": "BULLISH",
+          "weight": 2,
+          "reason": "Uptrend confirmed"
+        },
+        {
+          "indicator": "MACD",
+          "signal": "BULLISH",
+          "weight": 1,
+          "reason": "Positive momentum"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "id": "1783094286904",
+      "symbol": "1000SATSUSDT",
+      "type": "SHORT",
+      "entryPrice": 0.0000099,
+      "quantity": 18337750.05884432,
+      "positionSize": 181.54372558255878,
+      "stopLoss": 0.00000998994,
+      "takeProfit": 0.00000989,
+      "entryTime": "2026-07-03T15:58:06.904Z",
+      "confidence": "MEDIUM",
+      "signals": [
+        {
+          "indicator": "RSI",
+          "signal": "BEARISH",
+          "weight": 2,
+          "reason": "Overbought 66.50"
+        },
+        {
+          "indicator": "EMA",
+          "signal": "BULLISH",
+          "weight": 2,
+          "reason": "Uptrend confirmed"
+        },
+        {
+          "indicator": "BB",
+          "signal": "BEARISH",
+          "weight": 1.5,
+          "reason": "Above upper band"
+        },
+        {
+          "indicator": "MACD",
+          "signal": "BULLISH",
+          "weight": 1,
+          "reason": "Positive momentum"
+        },
+        {
+          "indicator": "CVD",
+          "signal": "BEARISH",
+          "weight": 2,
+          "reason": "Strong sell pressure"
+        },
+        {
+          "indicator": "L/S Ratio",
+          "signal": "BEARISH",
+          "weight": 2,
+          "reason": "Too many longs"
+        }
+      ],
+      "status": "CLOSED",
+      "exitPrice": 0.00000988,
+      "exitTime": "2026-07-03T16:00:18.406Z",
+      "closeReason": "TAKE_PROFIT",
+      "pnl": 0.3667550011768829,
+      "pnlPercent": 0.2020202020202001
+    },
+    {
+      "id": "1783094318130",
+      "symbol": "AAVEUSDT",
+      "type": "LONG",
+      "entryPrice": 88.8,
+      "quantity": 2.0467132064217877,
+      "positionSize": 181.74813273025472,
+      "stopLoss": 88.00364,
+      "takeProfit": 94.75,
+      "entryTime": "2026-07-03T15:58:38.130Z",
+      "confidence": "MEDIUM",
+      "signals": [
+        {
+          "indicator": "EMA",
+          "signal": "BULLISH",
+          "weight": 2,
+          "reason": "Uptrend confirmed"
+        },
+        {
+          "indicator": "MACD",
+          "signal": "BULLISH",
+          "weight": 1,
+          "reason": "Positive momentum"
+        },
+        {
+          "indicator": "OrderBook",
+          "signal": "BULLISH",
+          "weight": 1.5,
+          "reason": "Bid/Ask 1.56"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "id": "1783094441801",
+      "symbol": "APTUSDT",
+      "type": "LONG",
+      "entryPrice": 0.618,
+      "quantity": 294.0960836364472,
+      "positionSize": 181.75137968732437,
+      "stopLoss": 0.614768,
+      "takeProfit": 0.626,
+      "entryTime": "2026-07-03T16:00:41.801Z",
+      "confidence": "MEDIUM",
+      "signals": [
+        {
+          "indicator": "EMA",
+          "signal": "BULLISH",
+          "weight": 2,
+          "reason": "Uptrend confirmed"
+        },
+        {
+          "indicator": "MACD",
+          "signal": "BULLISH",
+          "weight": 1,
+          "reason": "Positive momentum"
+        },
+        {
+          "indicator": "OrderBook",
+          "signal": "BULLISH",
+          "weight": 1.5,
+          "reason": "Bid/Ask 2.08"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "id": "1783094702358",
+      "symbol": "1000SATSUSDT",
+      "type": "SHORT",
+      "entryPrice": 0.0000099,
+      "quantity": 18374381.56200542,
+      "positionSize": 181.90637746385366,
+      "stopLoss": 0.00000998994,
+      "takeProfit": 0.00000989,
+      "entryTime": "2026-07-03T16:05:02.358Z",
+      "confidence": "MEDIUM",
+      "signals": [
+        {
+          "indicator": "RSI",
+          "signal": "BEARISH",
+          "weight": 2,
+          "reason": "Overbought 66.48"
+        },
+        {
+          "indicator": "EMA",
+          "signal": "BULLISH",
+          "weight": 2,
+          "reason": "Uptrend confirmed"
+        },
+        {
+          "indicator": "MACD",
+          "signal": "BULLISH",
+          "weight": 1,
+          "reason": "Positive momentum"
+        },
+        {
+          "indicator": "CVD",
+          "signal": "BEARISH",
+          "weight": 2,
+          "reason": "Strong sell pressure"
+        },
+        {
+          "indicator": "L/S Ratio",
+          "signal": "BEARISH",
+          "weight": 2,
+          "reason": "Too many longs"
+        }
+      ],
+      "status": "CLOSED",
+      "exitPrice": 0.00000989,
+      "exitTime": "2026-07-03T16:07:30.346Z",
+      "closeReason": "TAKE_PROFIT",
+      "pnl": 0.18374381562005243,
+      "pnlPercent": 0.10101010101010004
+    },
+    {
+      "id": "1783095211453",
+      "symbol": "BONKUSDT",
+      "type": "LONG",
+      "entryPrice": 0.0000045,
+      "quantity": 40424456.07559245,
+      "positionSize": 181.91005234016603,
+      "stopLoss": 0.00000446106,
+      "takeProfit": 0.00000458,
+      "entryTime": "2026-07-03T16:13:31.453Z",
+      "confidence": "MEDIUM",
+      "signals": [
+        {
+          "indicator": "RSI",
+          "signal": "BEARISH",
+          "weight": 2,
+          "reason": "Overbought 65.96"
+        },
+        {
+          "indicator": "EMA",
+          "signal": "BULLISH",
+          "weight": 2,
+          "reason": "Uptrend confirmed"
+        },
+        {
+          "indicator": "MACD",
+          "signal": "BULLISH",
+          "weight": 1,
+          "reason": "Positive momentum"
+        },
+        {
+          "indicator": "OrderBook",
+          "signal": "BULLISH",
+          "weight": 1.5,
+          "reason": "Bid/Ask 1.84"
         },
         {
           "indicator": "CVD",
@@ -408,6 +735,757 @@
           "reason": "Strong buy pressure"
         }
       ],
+      "status": "OPEN"
+    },
+    {
+      "id": "1783098379456",
+      "symbol": "BTCUSDT",
+      "type": "LONG",
+      "entryPrice": 62217.99,
+      "quantity": 0.00286527821444188,
+      "positionSize": 178.27185129336272,
+      "stopLoss": 61814.124,
+      "takeProfit": 63239.06,
+      "entryTime": "2026-07-03T17:06:19.457Z",
+      "confidence": "MEDIUM",
+      "signals": [
+        {
+          "indicator": "EMA",
+          "signal": "BULLISH",
+          "weight": 2,
+          "reason": "Uptrend confirmed"
+        },
+        {
+          "indicator": "MACD",
+          "signal": "BULLISH",
+          "weight": 1,
+          "reason": "Positive momentum"
+        },
+        {
+          "indicator": "OrderBook",
+          "signal": "BULLISH",
+          "weight": 1.5,
+          "reason": "Bid/Ask 9.02"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "id": "1783098676753",
+      "symbol": "1000SATSUSDT",
+      "type": "SHORT",
+      "entryPrice": 0.0000099,
+      "quantity": 17647112.552272268,
+      "positionSize": 174.70641426749546,
+      "stopLoss": 0.00000998994,
+      "takeProfit": 0.00000989,
+      "entryTime": "2026-07-03T17:11:16.753Z",
+      "confidence": "MEDIUM",
+      "signals": [
+        {
+          "indicator": "RSI",
+          "signal": "BEARISH",
+          "weight": 2,
+          "reason": "Overbought 65.87"
+        },
+        {
+          "indicator": "EMA",
+          "signal": "BULLISH",
+          "weight": 2,
+          "reason": "Uptrend confirmed"
+        },
+        {
+          "indicator": "MACD",
+          "signal": "BULLISH",
+          "weight": 1,
+          "reason": "Positive momentum"
+        },
+        {
+          "indicator": "CVD",
+          "signal": "BEARISH",
+          "weight": 2,
+          "reason": "Strong sell pressure"
+        },
+        {
+          "indicator": "L/S Ratio",
+          "signal": "BEARISH",
+          "weight": 2,
+          "reason": "Too many longs"
+        }
+      ],
+      "status": "CLOSED",
+      "exitPrice": 0.00000989,
+      "exitTime": "2026-07-03T17:12:21.421Z",
+      "closeReason": "TAKE_PROFIT",
+      "pnl": 0.17647112552272098,
+      "pnlPercent": 0.10101010101010004
+    },
+    {
+      "id": "1783098802782",
+      "symbol": "INJUSDT",
+      "type": "LONG",
+      "entryPrice": 4.9,
+      "quantity": 35.6550905489808,
+      "positionSize": 174.70994369000593,
+      "stopLoss": 4.88521,
+      "takeProfit": 5.019,
+      "entryTime": "2026-07-03T17:13:22.782Z",
+      "confidence": "MEDIUM",
+      "signals": [
+        {
+          "indicator": "EMA",
+          "signal": "BULLISH",
+          "weight": 2,
+          "reason": "Uptrend confirmed"
+        },
+        {
+          "indicator": "MACD",
+          "signal": "BULLISH",
+          "weight": 1,
+          "reason": "Positive momentum"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "id": "1783290030811",
+      "symbol": "XRPUSDT",
+      "type": "LONG",
+      "entryPrice": 1.1531,
+      "quantity": 164.77022299407142,
+      "positionSize": 189.99654413446376,
+      "stopLoss": 1.118507,
+      "takeProfit": 1.222286,
+      "entryTime": "2026-07-05T22:20:30.811Z",
+      "confidence": "MEDIUM",
+      "status": "OPEN"
+    },
+    {
+      "id": "1783290030813",
+      "symbol": "DOTUSDT",
+      "type": "LONG",
+      "entryPrice": 0.886,
+      "quantity": 210.15419102909087,
+      "positionSize": 186.19661325177452,
+      "stopLoss": 0.85942,
+      "takeProfit": 0.9391600000000001,
+      "entryTime": "2026-07-05T22:20:30.813Z",
+      "confidence": "MEDIUM",
+      "status": "OPEN"
+    },
+    {
+      "id": "1783290030814",
+      "symbol": "ARBUSDT",
+      "type": "LONG",
+      "entryPrice": 0.0806,
+      "quantity": 2263.9290445004845,
+      "positionSize": 182.47268098673905,
+      "stopLoss": 0.078182,
+      "takeProfit": 0.08543600000000001,
+      "entryTime": "2026-07-05T22:20:30.814Z",
+      "confidence": "MEDIUM",
+      "status": "OPEN"
+    },
+    {
+      "id": "1783290030816",
+      "symbol": "OPUSDT",
+      "type": "LONG",
+      "entryPrice": 0.1087,
+      "quantity": 1645.1078874609407,
+      "positionSize": 178.82322736700425,
+      "stopLoss": 0.105439,
+      "takeProfit": 0.115222,
+      "entryTime": "2026-07-05T22:20:30.816Z",
+      "confidence": "MEDIUM",
+      "status": "OPEN"
+    },
+    {
+      "id": "1783290030817",
+      "symbol": "STXUSDT",
+      "type": "LONG",
+      "entryPrice": 0.1734,
+      "quantity": 1010.6503046116735,
+      "positionSize": 175.24676281966418,
+      "stopLoss": 0.168198,
+      "takeProfit": 0.183804,
+      "entryTime": "2026-07-05T22:20:30.817Z",
+      "confidence": "MEDIUM",
+      "status": "OPEN"
+    },
+    {
+      "id": "1783290030818",
+      "symbol": "DOGEUSDT",
+      "type": "LONG",
+      "entryPrice": 0.07815,
+      "quantity": 2197.592163317606,
+      "positionSize": 171.7418275632709,
+      "stopLoss": 0.0758055,
+      "takeProfit": 0.082839,
+      "entryTime": "2026-07-05T22:20:30.818Z",
+      "confidence": "MEDIUM",
+      "status": "OPEN"
+    },
+    {
+      "id": "1783290030819",
+      "symbol": "PEPEUSDT",
+      "type": "LONG",
+      "entryPrice": 0.00000274,
+      "quantity": 61425909.12846915,
+      "positionSize": 168.30699101200545,
+      "stopLoss": 0.0000026577999999999998,
+      "takeProfit": 0.0000029044,
+      "entryTime": "2026-07-05T22:20:30.819Z",
+      "confidence": "MEDIUM",
+      "status": "OPEN"
+    },
+    {
+      "id": "1783290065134",
+      "symbol": "SOLUSDT",
+      "type": "LONG",
+      "entryPrice": 82.09,
+      "quantity": 2.009268500326049,
+      "positionSize": 164.94085119176538,
+      "stopLoss": 79.6273,
+      "takeProfit": 87.01540000000001,
+      "entryTime": "2026-07-05T22:21:05.134Z",
+      "confidence": "MEDIUM",
+      "status": "OPEN"
+    },
+    {
+      "id": "1783290065135",
+      "symbol": "SUIUSDT",
+      "type": "LONG",
+      "entryPrice": 0.7632,
+      "quantity": 211.79511814456245,
+      "positionSize": 161.64203416793006,
+      "stopLoss": 0.740304,
+      "takeProfit": 0.808992,
+      "entryTime": "2026-07-05T22:21:05.135Z",
+      "confidence": "MEDIUM",
+      "status": "OPEN"
+    },
+    {
+      "id": "1783290133891",
+      "symbol": "CRVUSDT",
+      "type": "LONG",
+      "entryPrice": 0.2136,
+      "quantity": 741.616074365971,
+      "positionSize": 158.40919348457143,
+      "stopLoss": 0.20719200000000002,
+      "takeProfit": 0.22641600000000003,
+      "entryTime": "2026-07-05T22:22:13.891Z",
+      "confidence": "MEDIUM",
+      "status": "OPEN"
+    },
+    {
+      "id": "1783290137453",
+      "symbol": "AVAXUSDT",
+      "type": "LONG",
+      "entryPrice": 6.982,
+      "quantity": 22.234461417198514,
+      "positionSize": 155.24100961488003,
+      "stopLoss": 6.77254,
+      "takeProfit": 7.40092,
+      "entryTime": "2026-07-05T22:22:17.453Z",
+      "confidence": "MEDIUM",
+      "status": "OPEN"
+    },
+    {
+      "id": "1783290219169",
+      "symbol": "FLOKIUSDT",
+      "type": "LONG",
+      "entryPrice": 0.00002401,
+      "quantity": 6336367.739382858,
+      "positionSize": 152.13618942258242,
+      "stopLoss": 0.000023289699999999998,
+      "takeProfit": 0.0000254506,
+      "entryTime": "2026-07-05T22:23:39.169Z",
+      "confidence": "MEDIUM",
+      "status": "OPEN"
+    },
+    {
+      "id": "1783290543686",
+      "symbol": "UNIUSDT",
+      "type": "LONG",
+      "entryPrice": 3.2,
+      "quantity": 46.59170801066587,
+      "positionSize": 149.09346563413078,
+      "stopLoss": 3.104,
+      "takeProfit": 3.3920000000000003,
+      "entryTime": "2026-07-05T22:29:03.686Z",
+      "confidence": "MEDIUM",
+      "status": "OPEN"
+    },
+    {
+      "id": "1783353536723",
+      "symbol": "BONKUSDT",
+      "type": "SHORT",
+      "entryPrice": 0.00000471,
+      "quantity": 31861287.669116277,
+      "positionSize": 150.06666492153767,
+      "stopLoss": 0.0000048513,
+      "takeProfit": 0.000004427399999999999,
+      "entryTime": "2026-07-06T15:58:56.723Z",
+      "confidence": "MEDIUM",
+      "status": "OPEN"
+    },
+    {
+      "id": "1783353627014",
+      "symbol": "SANDUSDT",
+      "type": "LONG",
+      "entryPrice": 0.05006,
+      "quantity": 2937.7812949082486,
+      "positionSize": 147.0653316231069,
+      "stopLoss": 0.048558199999999996,
+      "takeProfit": 0.0530636,
+      "entryTime": "2026-07-06T16:00:27.014Z",
+      "confidence": "MEDIUM",
+      "status": "OPEN"
+    },
+    {
+      "id": "1783353663768",
+      "symbol": "LINKUSDT",
+      "type": "LONG",
+      "entryPrice": 7.997,
+      "quantity": 18.02226147188255,
+      "positionSize": 144.12402499064476,
+      "stopLoss": 7.75709,
+      "takeProfit": 8.47682,
+      "entryTime": "2026-07-06T16:01:03.768Z",
+      "confidence": "MEDIUM",
+      "status": "OPEN"
+    },
+    {
+      "id": "1783354686857",
+      "symbol": "BTCUSDT",
+      "type": "LONG",
+      "entryPrice": 63778.01,
+      "quantity": 0.0022145806131428666,
+      "positionSize": 141.24154449083187,
+      "stopLoss": 61864.6697,
+      "takeProfit": 67604.6906,
+      "entryTime": "2026-07-06T16:18:06.857Z",
+      "confidence": "MEDIUM",
+      "status": "OPEN"
+    },
+    {
+      "id": "1783354748434",
+      "symbol": "ETHUSDT",
+      "type": "LONG",
+      "entryPrice": 1799.46,
+      "quantity": 0.07692125059796563,
+      "positionSize": 138.41671360101523,
+      "stopLoss": 1745.4762,
+      "takeProfit": 1907.4276000000002,
+      "entryTime": "2026-07-06T16:19:08.435Z",
+      "confidence": "MEDIUM",
+      "status": "OPEN"
+    },
+    {
+      "id": "1783354870522",
+      "symbol": "ADAUSDT",
+      "type": "LONG",
+      "entryPrice": 0.1859,
+      "quantity": 729.6846655674819,
+      "positionSize": 135.6483793289949,
+      "stopLoss": 0.180323,
+      "takeProfit": 0.197054,
+      "entryTime": "2026-07-06T16:21:10.522Z",
+      "confidence": "MEDIUM",
+      "status": "OPEN"
+    },
+    {
+      "id": "1783355212048",
+      "symbol": "INJUSDT",
+      "type": "LONG",
+      "entryPrice": 4.847,
+      "quantity": 28.03499578334468,
+      "positionSize": 135.88562456187168,
+      "stopLoss": 4.70159,
+      "takeProfit": 5.1378200000000005,
+      "entryTime": "2026-07-06T16:26:52.048Z",
+      "confidence": "MEDIUM",
+      "status": "OPEN"
+    },
+    {
+      "id": "1783356558122",
+      "symbol": "COMPUSDT",
+      "type": "LONG",
+      "entryPrice": 17.54,
+      "quantity": 7.592241281107997,
+      "positionSize": 133.16791207063426,
+      "stopLoss": 17.0138,
+      "takeProfit": 18.5924,
+      "entryTime": "2026-07-06T16:49:18.122Z",
+      "confidence": "MEDIUM",
+      "status": "OPEN"
+    },
+    {
+      "id": "1783357239556",
+      "symbol": "WIFUSDT",
+      "type": "LONG",
+      "entryPrice": 0.1745,
+      "quantity": 747.8770993078601,
+      "positionSize": 130.50455382922158,
+      "stopLoss": 0.16926499999999997,
+      "takeProfit": 0.18497,
+      "entryTime": "2026-07-06T17:00:39.556Z",
+      "confidence": "MEDIUM",
+      "status": "OPEN"
+    },
+    {
+      "id": "1783357622196",
+      "symbol": "BNBUSDT",
+      "type": "LONG",
+      "entryPrice": 585.51,
+      "quantity": 0.21843258484507036,
+      "positionSize": 127.89446275263714,
+      "stopLoss": 567.9447,
+      "takeProfit": 620.6406000000001,
+      "entryTime": "2026-07-06T17:07:02.196Z",
+      "confidence": "MEDIUM",
+      "status": "OPEN"
+    }
+  ],
+  "openPositions": [
+    {
+      "id": "1783092313728",
+      "symbol": "SUSHIUSDT",
+      "type": "LONG",
+      "entryPrice": 0.1623,
+      "quantity": 1237.663619438264,
+      "positionSize": 200.87280543483024,
+      "stopLoss": 0.1604784,
+      "takeProfit": 0.1791,
+      "entryTime": "2026-07-03T15:25:13.728Z",
+      "confidence": "MEDIUM",
+      "signals": [
+        {
+          "indicator": "EMA",
+          "signal": "BULLISH",
+          "weight": 2,
+          "reason": "Uptrend confirmed"
+        },
+        {
+          "indicator": "MACD",
+          "signal": "BULLISH",
+          "weight": 1,
+          "reason": "Positive momentum"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "id": "1783094265510",
+      "symbol": "NEARUSDT",
+      "type": "LONG",
+      "entryPrice": 2.035,
+      "quantity": 91.03130200198504,
+      "positionSize": 185.24869957403956,
+      "stopLoss": 1.958076,
+      "takeProfit": 2.193,
+      "entryTime": "2026-07-03T15:57:45.510Z",
+      "confidence": "MEDIUM",
+      "signals": [
+        {
+          "indicator": "EMA",
+          "signal": "BULLISH",
+          "weight": 2,
+          "reason": "Uptrend confirmed"
+        },
+        {
+          "indicator": "MACD",
+          "signal": "BULLISH",
+          "weight": 1,
+          "reason": "Positive momentum"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "id": "1783290030811",
+      "symbol": "XRPUSDT",
+      "type": "LONG",
+      "entryPrice": 1.1531,
+      "quantity": 164.77022299407142,
+      "positionSize": 189.99654413446376,
+      "stopLoss": 1.118507,
+      "takeProfit": 1.222286,
+      "entryTime": "2026-07-05T22:20:30.811Z",
+      "confidence": "MEDIUM",
+      "status": "OPEN"
+    },
+    {
+      "id": "1783290030813",
+      "symbol": "DOTUSDT",
+      "type": "LONG",
+      "entryPrice": 0.886,
+      "quantity": 210.15419102909087,
+      "positionSize": 186.19661325177452,
+      "stopLoss": 0.85942,
+      "takeProfit": 0.9391600000000001,
+      "entryTime": "2026-07-05T22:20:30.813Z",
+      "confidence": "MEDIUM",
+      "status": "OPEN"
+    },
+    {
+      "id": "1783290030814",
+      "symbol": "ARBUSDT",
+      "type": "LONG",
+      "entryPrice": 0.0806,
+      "quantity": 2263.9290445004845,
+      "positionSize": 182.47268098673905,
+      "stopLoss": 0.078182,
+      "takeProfit": 0.08543600000000001,
+      "entryTime": "2026-07-05T22:20:30.814Z",
+      "confidence": "MEDIUM",
+      "status": "OPEN"
+    },
+    {
+      "id": "1783290030816",
+      "symbol": "OPUSDT",
+      "type": "LONG",
+      "entryPrice": 0.1087,
+      "quantity": 1645.1078874609407,
+      "positionSize": 178.82322736700425,
+      "stopLoss": 0.105439,
+      "takeProfit": 0.115222,
+      "entryTime": "2026-07-05T22:20:30.816Z",
+      "confidence": "MEDIUM",
+      "status": "OPEN"
+    },
+    {
+      "id": "1783290030817",
+      "symbol": "STXUSDT",
+      "type": "LONG",
+      "entryPrice": 0.1734,
+      "quantity": 1010.6503046116735,
+      "positionSize": 175.24676281966418,
+      "stopLoss": 0.168198,
+      "takeProfit": 0.183804,
+      "entryTime": "2026-07-05T22:20:30.817Z",
+      "confidence": "MEDIUM",
+      "status": "OPEN"
+    },
+    {
+      "id": "1783290030818",
+      "symbol": "DOGEUSDT",
+      "type": "LONG",
+      "entryPrice": 0.07815,
+      "quantity": 2197.592163317606,
+      "positionSize": 171.7418275632709,
+      "stopLoss": 0.0758055,
+      "takeProfit": 0.082839,
+      "entryTime": "2026-07-05T22:20:30.818Z",
+      "confidence": "MEDIUM",
+      "status": "OPEN"
+    },
+    {
+      "id": "1783290030819",
+      "symbol": "PEPEUSDT",
+      "type": "LONG",
+      "entryPrice": 0.00000274,
+      "quantity": 61425909.12846915,
+      "positionSize": 168.30699101200545,
+      "stopLoss": 0.0000026577999999999998,
+      "takeProfit": 0.0000029044,
+      "entryTime": "2026-07-05T22:20:30.819Z",
+      "confidence": "MEDIUM",
+      "status": "OPEN"
+    },
+    {
+      "id": "1783290065134",
+      "symbol": "SOLUSDT",
+      "type": "LONG",
+      "entryPrice": 82.09,
+      "quantity": 2.009268500326049,
+      "positionSize": 164.94085119176538,
+      "stopLoss": 79.6273,
+      "takeProfit": 87.01540000000001,
+      "entryTime": "2026-07-05T22:21:05.134Z",
+      "confidence": "MEDIUM",
+      "status": "OPEN"
+    },
+    {
+      "id": "1783290065135",
+      "symbol": "SUIUSDT",
+      "type": "LONG",
+      "entryPrice": 0.7632,
+      "quantity": 211.79511814456245,
+      "positionSize": 161.64203416793006,
+      "stopLoss": 0.740304,
+      "takeProfit": 0.808992,
+      "entryTime": "2026-07-05T22:21:05.135Z",
+      "confidence": "MEDIUM",
+      "status": "OPEN"
+    },
+    {
+      "id": "1783290133891",
+      "symbol": "CRVUSDT",
+      "type": "LONG",
+      "entryPrice": 0.2136,
+      "quantity": 741.616074365971,
+      "positionSize": 158.40919348457143,
+      "stopLoss": 0.20719200000000002,
+      "takeProfit": 0.22641600000000003,
+      "entryTime": "2026-07-05T22:22:13.891Z",
+      "confidence": "MEDIUM",
+      "status": "OPEN"
+    },
+    {
+      "id": "1783290137453",
+      "symbol": "AVAXUSDT",
+      "type": "LONG",
+      "entryPrice": 6.982,
+      "quantity": 22.234461417198514,
+      "positionSize": 155.24100961488003,
+      "stopLoss": 6.77254,
+      "takeProfit": 7.40092,
+      "entryTime": "2026-07-05T22:22:17.453Z",
+      "confidence": "MEDIUM",
+      "status": "OPEN"
+    },
+    {
+      "id": "1783290543686",
+      "symbol": "UNIUSDT",
+      "type": "LONG",
+      "entryPrice": 3.2,
+      "quantity": 46.59170801066587,
+      "positionSize": 149.09346563413078,
+      "stopLoss": 3.104,
+      "takeProfit": 3.3920000000000003,
+      "entryTime": "2026-07-05T22:29:03.686Z",
+      "confidence": "MEDIUM",
+      "status": "OPEN"
+    },
+    {
+      "id": "1783353536723",
+      "symbol": "BONKUSDT",
+      "type": "SHORT",
+      "entryPrice": 0.00000471,
+      "quantity": 31861287.669116277,
+      "positionSize": 150.06666492153767,
+      "stopLoss": 0.0000048513,
+      "takeProfit": 0.000004427399999999999,
+      "entryTime": "2026-07-06T15:58:56.723Z",
+      "confidence": "MEDIUM",
+      "status": "OPEN"
+    },
+    {
+      "id": "1783353627014",
+      "symbol": "SANDUSDT",
+      "type": "LONG",
+      "entryPrice": 0.05006,
+      "quantity": 2937.7812949082486,
+      "positionSize": 147.0653316231069,
+      "stopLoss": 0.048558199999999996,
+      "takeProfit": 0.0530636,
+      "entryTime": "2026-07-06T16:00:27.014Z",
+      "confidence": "MEDIUM",
+      "status": "OPEN"
+    },
+    {
+      "id": "1783353663768",
+      "symbol": "LINKUSDT",
+      "type": "LONG",
+      "entryPrice": 7.997,
+      "quantity": 18.02226147188255,
+      "positionSize": 144.12402499064476,
+      "stopLoss": 7.75709,
+      "takeProfit": 8.47682,
+      "entryTime": "2026-07-06T16:01:03.768Z",
+      "confidence": "MEDIUM",
+      "status": "OPEN"
+    },
+    {
+      "id": "1783354686857",
+      "symbol": "BTCUSDT",
+      "type": "LONG",
+      "entryPrice": 63778.01,
+      "quantity": 0.0022145806131428666,
+      "positionSize": 141.24154449083187,
+      "stopLoss": 61864.6697,
+      "takeProfit": 67604.6906,
+      "entryTime": "2026-07-06T16:18:06.857Z",
+      "confidence": "MEDIUM",
+      "status": "OPEN"
+    },
+    {
+      "id": "1783354748434",
+      "symbol": "ETHUSDT",
+      "type": "LONG",
+      "entryPrice": 1799.46,
+      "quantity": 0.07692125059796563,
+      "positionSize": 138.41671360101523,
+      "stopLoss": 1745.4762,
+      "takeProfit": 1907.4276000000002,
+      "entryTime": "2026-07-06T16:19:08.435Z",
+      "confidence": "MEDIUM",
+      "status": "OPEN"
+    },
+    {
+      "id": "1783354870522",
+      "symbol": "ADAUSDT",
+      "type": "LONG",
+      "entryPrice": 0.1859,
+      "quantity": 729.6846655674819,
+      "positionSize": 135.6483793289949,
+      "stopLoss": 0.180323,
+      "takeProfit": 0.197054,
+      "entryTime": "2026-07-06T16:21:10.522Z",
+      "confidence": "MEDIUM",
+      "status": "OPEN"
+    },
+    {
+      "id": "1783355212048",
+      "symbol": "INJUSDT",
+      "type": "LONG",
+      "entryPrice": 4.847,
+      "quantity": 28.03499578334468,
+      "positionSize": 135.88562456187168,
+      "stopLoss": 4.70159,
+      "takeProfit": 5.1378200000000005,
+      "entryTime": "2026-07-06T16:26:52.048Z",
+      "confidence": "MEDIUM",
+      "status": "OPEN"
+    },
+    {
+      "id": "1783356558122",
+      "symbol": "COMPUSDT",
+      "type": "LONG",
+      "entryPrice": 17.54,
+      "quantity": 7.592241281107997,
+      "positionSize": 133.16791207063426,
+      "stopLoss": 17.0138,
+      "takeProfit": 18.5924,
+      "entryTime": "2026-07-06T16:49:18.122Z",
+      "confidence": "MEDIUM",
+      "status": "OPEN"
+    },
+    {
+      "id": "1783357239556",
+      "symbol": "WIFUSDT",
+      "type": "LONG",
+      "entryPrice": 0.1745,
+      "quantity": 747.8770993078601,
+      "positionSize": 130.50455382922158,
+      "stopLoss": 0.16926499999999997,
+      "takeProfit": 0.18497,
+      "entryTime": "2026-07-06T17:00:39.556Z",
+      "confidence": "MEDIUM",
+      "status": "OPEN"
+    },
+    {
+      "id": "1783357622196",
+      "symbol": "BNBUSDT",
+      "type": "LONG",
+      "entryPrice": 585.51,
+      "quantity": 0.21843258484507036,
+      "positionSize": 127.89446275263714,
+      "stopLoss": 567.9447,
+      "takeProfit": 620.6406000000001,
+      "entryTime": "2026-07-06T17:07:02.196Z",
+      "confidence": "MEDIUM",
       "status": "OPEN"
     }
   ],
@@ -621,22 +1699,672 @@
       "closeReason": "TAKE_PROFIT",
       "pnl": 0.11980280678299941,
       "pnlPercent": 0.06109632658336204
+    },
+    {
+      "id": "1783026306244",
+      "symbol": "PEPEUSDT",
+      "type": "LONG",
+      "entryPrice": 0.00000244,
+      "quantity": 78757777.11808048,
+      "positionSize": 192.1689761681164,
+      "stopLoss": 0.00000241516,
+      "takeProfit": 0.0000025,
+      "entryTime": "2026-07-02T21:05:06.244Z",
+      "confidence": "HIGH",
+      "signals": [
+        {
+          "indicator": "EMA",
+          "signal": "BULLISH",
+          "weight": 2,
+          "reason": "Uptrend confirmed"
+        },
+        {
+          "indicator": "MACD",
+          "signal": "BULLISH",
+          "weight": 1,
+          "reason": "Positive momentum"
+        },
+        {
+          "indicator": "OrderBook",
+          "signal": "BULLISH",
+          "weight": 1.5,
+          "reason": "Bid/Ask 2.03"
+        },
+        {
+          "indicator": "CVD",
+          "signal": "BULLISH",
+          "weight": 2,
+          "reason": "Strong buy pressure"
+        }
+      ],
+      "status": "CLOSED",
+      "exitPrice": 0.00000256,
+      "exitTime": "2026-07-03T15:25:13.718Z",
+      "closeReason": "TAKE_PROFIT",
+      "pnl": 9.450933254169668,
+      "pnlPercent": 4.9180327868852505
+    },
+    {
+      "id": "1783026305765",
+      "symbol": "OPUSDT",
+      "type": "LONG",
+      "entryPrice": 0.0984,
+      "quantity": 1992.7926017101834,
+      "positionSize": 196.09079200828205,
+      "stopLoss": 0.0975046,
+      "takeProfit": 0.101,
+      "entryTime": "2026-07-02T21:05:05.765Z",
+      "confidence": "MEDIUM",
+      "signals": [
+        {
+          "indicator": "EMA",
+          "signal": "BULLISH",
+          "weight": 2,
+          "reason": "Uptrend confirmed"
+        },
+        {
+          "indicator": "MACD",
+          "signal": "BULLISH",
+          "weight": 1,
+          "reason": "Positive momentum"
+        }
+      ],
+      "status": "CLOSED",
+      "exitPrice": 0.1052,
+      "exitTime": "2026-07-03T15:25:13.720Z",
+      "closeReason": "TAKE_PROFIT",
+      "pnl": 13.550989691629248,
+      "pnlPercent": 6.910569105691057
+    },
+    {
+      "id": "1782988274437",
+      "symbol": "ADAUSDT",
+      "type": "LONG",
+      "entryPrice": 0.1586,
+      "quantity": 1261.5221738564585,
+      "positionSize": 200.0774167736343,
+      "stopLoss": 0.1559874,
+      "takeProfit": 0.1629,
+      "entryTime": "2026-07-02T10:31:14.437Z",
+      "confidence": "MEDIUM",
+      "signals": [
+        {
+          "indicator": "EMA",
+          "signal": "BULLISH",
+          "reason": "Price above EMA20 & EMA50 (uptrend)"
+        },
+        {
+          "indicator": "BB",
+          "signal": "BEARISH",
+          "reason": "Price above upper Bollinger Band"
+        },
+        {
+          "indicator": "MACD",
+          "signal": "BULLISH",
+          "reason": "MACD line positive"
+        },
+        {
+          "indicator": "OrderBook",
+          "signal": "BULLISH",
+          "reason": "Bid/Ask ratio 1.20 - More buyers"
+        }
+      ],
+      "status": "CLOSED",
+      "exitPrice": 0.1713,
+      "exitTime": "2026-07-03T15:25:13.721Z",
+      "closeReason": "TAKE_PROFIT",
+      "pnl": 16.021331607977043,
+      "pnlPercent": 8.007566204287526
+    },
+    {
+      "id": "1783093219597",
+      "symbol": "APTUSDT",
+      "type": "LONG",
+      "entryPrice": 0.618,
+      "quantity": 312.1654406789822,
+      "positionSize": 192.91824233961097,
+      "stopLoss": 0.614768,
+      "takeProfit": 0.626,
+      "entryTime": "2026-07-03T15:40:19.597Z",
+      "confidence": "MEDIUM",
+      "signals": [
+        {
+          "indicator": "EMA",
+          "signal": "BULLISH",
+          "weight": 2,
+          "reason": "Uptrend confirmed"
+        },
+        {
+          "indicator": "MACD",
+          "signal": "BULLISH",
+          "weight": 1,
+          "reason": "Positive momentum"
+        },
+        {
+          "indicator": "OrderBook",
+          "signal": "BULLISH",
+          "weight": 1.5,
+          "reason": "Bid/Ask 1.74"
+        }
+      ],
+      "status": "CLOSED",
+      "exitPrice": 0.613,
+      "exitTime": "2026-07-03T15:41:08.569Z",
+      "closeReason": "STOP_LOSS",
+      "pnl": -1.5608272033949122,
+      "pnlPercent": -0.80906148867314
+    },
+    {
+      "id": "1783093756363",
+      "symbol": "AAVEUSDT",
+      "type": "LONG",
+      "entryPrice": 89.32,
+      "quantity": 2.159505438821575,
+      "positionSize": 192.88702579554305,
+      "stopLoss": 88.822,
+      "takeProfit": 94.75,
+      "entryTime": "2026-07-03T15:49:16.363Z",
+      "confidence": "MEDIUM",
+      "signals": [
+        {
+          "indicator": "EMA",
+          "signal": "BULLISH",
+          "weight": 2,
+          "reason": "Uptrend confirmed"
+        },
+        {
+          "indicator": "MACD",
+          "signal": "BULLISH",
+          "weight": 1,
+          "reason": "Positive momentum"
+        },
+        {
+          "indicator": "OrderBook",
+          "signal": "BULLISH",
+          "weight": 1.5,
+          "reason": "Bid/Ask 1.24"
+        }
+      ],
+      "status": "CLOSED",
+      "exitPrice": 88.8,
+      "exitTime": "2026-07-03T15:58:38.127Z",
+      "closeReason": "STOP_LOSS",
+      "pnl": -1.1229428281872103,
+      "pnlPercent": -0.5821764442454053
+    },
+    {
+      "id": "1783094286904",
+      "symbol": "1000SATSUSDT",
+      "type": "SHORT",
+      "entryPrice": 0.0000099,
+      "quantity": 18337750.05884432,
+      "positionSize": 181.54372558255878,
+      "stopLoss": 0.00000998994,
+      "takeProfit": 0.00000989,
+      "entryTime": "2026-07-03T15:58:06.904Z",
+      "confidence": "MEDIUM",
+      "signals": [
+        {
+          "indicator": "RSI",
+          "signal": "BEARISH",
+          "weight": 2,
+          "reason": "Overbought 66.50"
+        },
+        {
+          "indicator": "EMA",
+          "signal": "BULLISH",
+          "weight": 2,
+          "reason": "Uptrend confirmed"
+        },
+        {
+          "indicator": "BB",
+          "signal": "BEARISH",
+          "weight": 1.5,
+          "reason": "Above upper band"
+        },
+        {
+          "indicator": "MACD",
+          "signal": "BULLISH",
+          "weight": 1,
+          "reason": "Positive momentum"
+        },
+        {
+          "indicator": "CVD",
+          "signal": "BEARISH",
+          "weight": 2,
+          "reason": "Strong sell pressure"
+        },
+        {
+          "indicator": "L/S Ratio",
+          "signal": "BEARISH",
+          "weight": 2,
+          "reason": "Too many longs"
+        }
+      ],
+      "status": "CLOSED",
+      "exitPrice": 0.00000988,
+      "exitTime": "2026-07-03T16:00:18.406Z",
+      "closeReason": "TAKE_PROFIT",
+      "pnl": 0.3667550011768829,
+      "pnlPercent": 0.2020202020202001
+    },
+    {
+      "id": "1783094117961",
+      "symbol": "XRPUSDT",
+      "type": "SHORT",
+      "entryPrice": 1.1214,
+      "quantity": 168.5654407701375,
+      "positionSize": 189.0292852796322,
+      "stopLoss": 1.146288,
+      "takeProfit": 1.1187,
+      "entryTime": "2026-07-03T15:55:17.961Z",
+      "confidence": "MEDIUM",
+      "signals": [
+        {
+          "indicator": "RSI",
+          "signal": "BEARISH",
+          "weight": 2,
+          "reason": "Overbought 75.07"
+        },
+        {
+          "indicator": "EMA",
+          "signal": "BULLISH",
+          "weight": 2,
+          "reason": "Uptrend confirmed"
+        },
+        {
+          "indicator": "BB",
+          "signal": "BEARISH",
+          "weight": 1.5,
+          "reason": "Above upper band"
+        },
+        {
+          "indicator": "MACD",
+          "signal": "BULLISH",
+          "weight": 1,
+          "reason": "Positive momentum"
+        },
+        {
+          "indicator": "OrderBook",
+          "signal": "BEARISH",
+          "weight": 1.5,
+          "reason": "Bid/Ask 0.79"
+        },
+        {
+          "indicator": "L/S Ratio",
+          "signal": "BEARISH",
+          "weight": 2,
+          "reason": "Too many longs"
+        }
+      ],
+      "status": "CLOSED",
+      "exitPrice": 1.1186,
+      "exitTime": "2026-07-03T16:02:52.635Z",
+      "closeReason": "TAKE_PROFIT",
+      "pnl": 0.4719832341563705,
+      "pnlPercent": 0.24968789013732068
+    },
+    {
+      "id": "1783094702358",
+      "symbol": "1000SATSUSDT",
+      "type": "SHORT",
+      "entryPrice": 0.0000099,
+      "quantity": 18374381.56200542,
+      "positionSize": 181.90637746385366,
+      "stopLoss": 0.00000998994,
+      "takeProfit": 0.00000989,
+      "entryTime": "2026-07-03T16:05:02.358Z",
+      "confidence": "MEDIUM",
+      "signals": [
+        {
+          "indicator": "RSI",
+          "signal": "BEARISH",
+          "weight": 2,
+          "reason": "Overbought 66.48"
+        },
+        {
+          "indicator": "EMA",
+          "signal": "BULLISH",
+          "weight": 2,
+          "reason": "Uptrend confirmed"
+        },
+        {
+          "indicator": "MACD",
+          "signal": "BULLISH",
+          "weight": 1,
+          "reason": "Positive momentum"
+        },
+        {
+          "indicator": "CVD",
+          "signal": "BEARISH",
+          "weight": 2,
+          "reason": "Strong sell pressure"
+        },
+        {
+          "indicator": "L/S Ratio",
+          "signal": "BEARISH",
+          "weight": 2,
+          "reason": "Too many longs"
+        }
+      ],
+      "status": "CLOSED",
+      "exitPrice": 0.00000989,
+      "exitTime": "2026-07-03T16:07:30.346Z",
+      "closeReason": "TAKE_PROFIT",
+      "pnl": 0.18374381562005243,
+      "pnlPercent": 0.10101010101010004
+    },
+    {
+      "id": "1783098676753",
+      "symbol": "1000SATSUSDT",
+      "type": "SHORT",
+      "entryPrice": 0.0000099,
+      "quantity": 17647112.552272268,
+      "positionSize": 174.70641426749546,
+      "stopLoss": 0.00000998994,
+      "takeProfit": 0.00000989,
+      "entryTime": "2026-07-03T17:11:16.753Z",
+      "confidence": "MEDIUM",
+      "signals": [
+        {
+          "indicator": "RSI",
+          "signal": "BEARISH",
+          "weight": 2,
+          "reason": "Overbought 65.87"
+        },
+        {
+          "indicator": "EMA",
+          "signal": "BULLISH",
+          "weight": 2,
+          "reason": "Uptrend confirmed"
+        },
+        {
+          "indicator": "MACD",
+          "signal": "BULLISH",
+          "weight": 1,
+          "reason": "Positive momentum"
+        },
+        {
+          "indicator": "CVD",
+          "signal": "BEARISH",
+          "weight": 2,
+          "reason": "Strong sell pressure"
+        },
+        {
+          "indicator": "L/S Ratio",
+          "signal": "BEARISH",
+          "weight": 2,
+          "reason": "Too many longs"
+        }
+      ],
+      "status": "CLOSED",
+      "exitPrice": 0.00000989,
+      "exitTime": "2026-07-03T17:12:21.421Z",
+      "closeReason": "TAKE_PROFIT",
+      "pnl": 0.17647112552272098,
+      "pnlPercent": 0.10101010101010004
+    },
+    {
+      "id": "1783098802782",
+      "symbol": "INJUSDT",
+      "type": "LONG",
+      "entryPrice": 4.9,
+      "quantity": 35.6550905489808,
+      "positionSize": 174.70994369000593,
+      "stopLoss": 4.88521,
+      "takeProfit": 5.019,
+      "entryTime": "2026-07-03T17:13:22.782Z",
+      "confidence": "MEDIUM",
+      "signals": [
+        {
+          "indicator": "EMA",
+          "signal": "BULLISH",
+          "weight": 2,
+          "reason": "Uptrend confirmed"
+        },
+        {
+          "indicator": "MACD",
+          "signal": "BULLISH",
+          "weight": 1,
+          "reason": "Positive momentum"
+        }
+      ],
+      "status": "CLOSED",
+      "exitPrice": 4.783,
+      "exitTime": "2026-07-05T22:17:54.899Z",
+      "closeReason": "STOP_LOSS",
+      "pnl": -4.171645594230753,
+      "pnlPercent": -2.387755102040816
+    },
+    {
+      "id": "1783098379456",
+      "symbol": "BTCUSDT",
+      "type": "LONG",
+      "entryPrice": 62217.99,
+      "quantity": 0.00286527821444188,
+      "positionSize": 178.27185129336272,
+      "stopLoss": 61814.124,
+      "takeProfit": 63239.06,
+      "entryTime": "2026-07-03T17:06:19.457Z",
+      "confidence": "MEDIUM",
+      "signals": [
+        {
+          "indicator": "EMA",
+          "signal": "BULLISH",
+          "weight": 2,
+          "reason": "Uptrend confirmed"
+        },
+        {
+          "indicator": "MACD",
+          "signal": "BULLISH",
+          "weight": 1,
+          "reason": "Positive momentum"
+        },
+        {
+          "indicator": "OrderBook",
+          "signal": "BULLISH",
+          "weight": 1.5,
+          "reason": "Bid/Ask 9.02"
+        }
+      ],
+      "status": "CLOSED",
+      "exitPrice": 63249.11,
+      "exitTime": "2026-07-05T22:17:54.903Z",
+      "closeReason": "TAKE_PROFIT",
+      "pnl": 2.9544456724753188,
+      "pnlPercent": 1.6572698668021948
+    },
+    {
+      "id": "1783095211453",
+      "symbol": "BONKUSDT",
+      "type": "LONG",
+      "entryPrice": 0.0000045,
+      "quantity": 40424456.07559245,
+      "positionSize": 181.91005234016603,
+      "stopLoss": 0.00000446106,
+      "takeProfit": 0.00000458,
+      "entryTime": "2026-07-03T16:13:31.453Z",
+      "confidence": "MEDIUM",
+      "signals": [
+        {
+          "indicator": "RSI",
+          "signal": "BEARISH",
+          "weight": 2,
+          "reason": "Overbought 65.96"
+        },
+        {
+          "indicator": "EMA",
+          "signal": "BULLISH",
+          "weight": 2,
+          "reason": "Uptrend confirmed"
+        },
+        {
+          "indicator": "MACD",
+          "signal": "BULLISH",
+          "weight": 1,
+          "reason": "Positive momentum"
+        },
+        {
+          "indicator": "OrderBook",
+          "signal": "BULLISH",
+          "weight": 1.5,
+          "reason": "Bid/Ask 1.84"
+        },
+        {
+          "indicator": "CVD",
+          "signal": "BULLISH",
+          "weight": 2,
+          "reason": "Strong buy pressure"
+        }
+      ],
+      "status": "CLOSED",
+      "exitPrice": 0.00000486,
+      "exitTime": "2026-07-05T22:17:54.907Z",
+      "closeReason": "TAKE_PROFIT",
+      "pnl": 14.55280418721328,
+      "pnlPercent": 7.999999999999999
+    },
+    {
+      "id": "1783094441801",
+      "symbol": "APTUSDT",
+      "type": "LONG",
+      "entryPrice": 0.618,
+      "quantity": 294.0960836364472,
+      "positionSize": 181.75137968732437,
+      "stopLoss": 0.614768,
+      "takeProfit": 0.626,
+      "entryTime": "2026-07-03T16:00:41.801Z",
+      "confidence": "MEDIUM",
+      "signals": [
+        {
+          "indicator": "EMA",
+          "signal": "BULLISH",
+          "weight": 2,
+          "reason": "Uptrend confirmed"
+        },
+        {
+          "indicator": "MACD",
+          "signal": "BULLISH",
+          "weight": 1,
+          "reason": "Positive momentum"
+        },
+        {
+          "indicator": "OrderBook",
+          "signal": "BULLISH",
+          "weight": 1.5,
+          "reason": "Bid/Ask 2.08"
+        }
+      ],
+      "status": "CLOSED",
+      "exitPrice": 0.636,
+      "exitTime": "2026-07-05T22:17:54.912Z",
+      "closeReason": "TAKE_PROFIT",
+      "pnl": 5.293729505456054,
+      "pnlPercent": 2.9126213592233032
+    },
+    {
+      "id": "1783092355590",
+      "symbol": "LINKUSDT",
+      "type": "LONG",
+      "entryPrice": 7.832,
+      "quantity": 25.13474838178417,
+      "positionSize": 196.85534932613362,
+      "stopLoss": 7.808352,
+      "takeProfit": 7.944,
+      "entryTime": "2026-07-03T15:25:55.590Z",
+      "confidence": "MEDIUM",
+      "signals": [
+        {
+          "indicator": "EMA",
+          "signal": "BULLISH",
+          "weight": 2,
+          "reason": "Uptrend confirmed"
+        },
+        {
+          "indicator": "MACD",
+          "signal": "BULLISH",
+          "weight": 1,
+          "reason": "Positive momentum"
+        }
+      ],
+      "status": "CLOSED",
+      "exitPrice": 8.107,
+      "exitTime": "2026-07-05T22:17:54.915Z",
+      "closeReason": "TAKE_PROFIT",
+      "pnl": 6.912055804990634,
+      "pnlPercent": 3.511235955056173
+    },
+    {
+      "id": "1783094318130",
+      "symbol": "AAVEUSDT",
+      "type": "LONG",
+      "entryPrice": 88.8,
+      "quantity": 2.0467132064217877,
+      "positionSize": 181.74813273025472,
+      "stopLoss": 88.00364,
+      "takeProfit": 94.75,
+      "entryTime": "2026-07-03T15:58:38.130Z",
+      "confidence": "MEDIUM",
+      "signals": [
+        {
+          "indicator": "EMA",
+          "signal": "BULLISH",
+          "weight": 2,
+          "reason": "Uptrend confirmed"
+        },
+        {
+          "indicator": "MACD",
+          "signal": "BULLISH",
+          "weight": 1,
+          "reason": "Positive momentum"
+        },
+        {
+          "indicator": "OrderBook",
+          "signal": "BULLISH",
+          "weight": 1.5,
+          "reason": "Bid/Ask 1.56"
+        }
+      ],
+      "status": "CLOSED",
+      "exitPrice": 96.62,
+      "exitTime": "2026-07-06T15:58:56.716Z",
+      "closeReason": "TAKE_PROFIT",
+      "pnl": 16.005297274218396,
+      "pnlPercent": 8.806306306306317
+    },
+    {
+      "id": "1783290219169",
+      "symbol": "FLOKIUSDT",
+      "type": "LONG",
+      "entryPrice": 0.00002401,
+      "quantity": 6336367.739382858,
+      "positionSize": 152.13618942258242,
+      "stopLoss": 0.000023289699999999998,
+      "takeProfit": 0.0000254506,
+      "entryTime": "2026-07-05T22:23:39.169Z",
+      "confidence": "MEDIUM",
+      "status": "CLOSED",
+      "exitPrice": 0.00002328,
+      "exitTime": "2026-07-06T16:26:52.034Z",
+      "closeReason": "STOP_LOSS",
+      "pnl": -4.625548449749474,
+      "pnlPercent": -3.0403998334027413
     }
   ],
   "stats": {
-    "totalTrades": 5,
-    "winningTrades": 5,
-    "losingTrades": 0,
-    "totalProfit": 4.61701718773568,
-    "totalLoss": 0,
-    "winRate": 100,
-    "avgProfit": 0.923403437547136,
-    "avgLoss": 0,
-    "largestWin": 3.8708386817143716,
-    "largestLoss": 0,
-    "currentStreak": 5,
-    "bestStreak": 5,
-    "worstStreak": 0
+    "totalTrades": 21,
+    "winningTrades": 17,
+    "losingTrades": 4,
+    "totalProfit": 90.55755736234134,
+    "totalLoss": 11.480964075562351,
+    "winRate": 80.95238095238095,
+    "avgProfit": 5.3269151389612555,
+    "avgLoss": 2.870241018890588,
+    "largestWin": 16.021331607977043,
+    "largestLoss": -4.625548449749474,
+    "currentStreak": -1,
+    "bestStreak": 8,
+    "worstStreak": -2
   },
-  "lastUpdated": "2026-07-02T21:05:06.244Z"
+  "lastUpdated": "2026-07-06T17:07:02.196Z"
 }

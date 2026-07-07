@@ -82,26 +82,16 @@ class PaperTrading {
     const entryPrice = analysis.price;
     const quantity = positionSize / entryPrice;
 
-    // Calculate stop loss and take profit
+    // Calculate stop loss and take profit (percentage-based for V2)
     let stopLoss, takeProfit;
 
     if (signal.action.includes('BUY')) {
-      stopLoss = analysis.levels.supports.length > 0
-        ? analysis.levels.supports[0].price * 0.998
-        : entryPrice * (1 - this.config.stopLossPercent);
-
-      takeProfit = analysis.levels.resistances.length > 0
-        ? analysis.levels.resistances[0].price
-        : entryPrice * (1 + this.config.takeProfitPercent);
+      stopLoss = entryPrice * (1 - this.config.stopLossPercent);
+      takeProfit = entryPrice * (1 + this.config.takeProfitPercent);
     } else {
       // For SELL (short), reverse the logic
-      stopLoss = analysis.levels.resistances.length > 0
-        ? analysis.levels.resistances[0].price * 1.002
-        : entryPrice * (1 + this.config.stopLossPercent);
-
-      takeProfit = analysis.levels.supports.length > 0
-        ? analysis.levels.supports[0].price
-        : entryPrice * (1 - this.config.takeProfitPercent);
+      stopLoss = entryPrice * (1 + this.config.stopLossPercent);
+      takeProfit = entryPrice * (1 - this.config.takeProfitPercent);
     }
 
     const trade = {

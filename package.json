@@ -4,9 +4,8 @@
   "description": "Advanced crypto futures trading analyzer with AI, CoinGlass integration, and 90-95% accuracy signals",
   "main": "enhanced-server.js",
   "scripts": {
-    "start": "node enhanced-server.js",
-    "dev": "node enhanced-server.js",
-    "old": "node server.js"
+    "start": "node enhanced-server-v5.js",
+    "backtest": "node run-backtest.js"
   },
   "keywords": [
     "crypto",

@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crypto Trading Analyzer V2 - Essential Indicators + Whale Detection</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+      color: #fff;
+      padding: 20px;
+      min-height: 100vh;
+    }
+
+    .header {
+      text-align: center;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 15px;
+      margin-bottom: 20px;
+      backdrop-filter: blur(10px);
+    }
+
+    .header h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+      background: linear-gradient(to right, #00f2fe, #4facfe);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .header .subtitle {
+      color: #aaa;
+      font-size: 1.1em;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+
+    .stat-card {
+      background: rgba(255, 255, 255, 0.08);
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .stat-card .label {
+      color: #aaa;
+      font-size: 0.9em;
+      margin-bottom: 8px;
+    }
+
+    .stat-card .value {
+      font-size: 2em;
+      font-weight: bold;
+      color: #4facfe;
+    }
+
+    .summary {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+
+    .summary-card {
+      background: rgba(255, 255, 255, 0.08);
+      padding: 15px;
+      border-radius: 12px;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .summary-card h3 {
+      font-size: 1.2em;
+      margin-bottom: 10px;
+      color: #4facfe;
+    }
+
+    .summary-card .counts {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 10px;
+    }
+
+    .summary-card .count-item {
+      text-align: center;
+    }
+
+    .summary-card .count-item .number {
+      font-size: 1.8em;
+      font-weight: bold;
+    }
+
+    .summary-card .count-item .label {
+      font-size: 0.8em;
+      color: #aaa;
+    }
+
+    .buy { color: #00ff88; }
+    .sell { color: #ff4757; }
+    .hold { color: #aaa; }
+
+    .symbols-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+      gap: 20px;
+    }
+
+    .symbol-card {
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 15px;
+      padding: 20px;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .symbol-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(79, 172, 254, 0.3);
+    }
+
+    .symbol-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .symbol-name {
+      font-size: 1.5em;
+      font-weight: bold;
+      color: #4facfe;
+    }
+
+    .price-info {
+      text-align: right;
+    }
+
+    .price {
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+
+    .price-change {
+      font-size: 0.9em;
+      margin-top: 3px;
+    }
+
+    .signals-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+
+    .signal-box {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 12px;
+      border-radius: 8px;
+      text-align: center;
+      border: 2px solid transparent;
+    }
+
+    .signal-box.strong-buy { border-color: #00ff88; background: rgba(0, 255, 136, 0.1); }
+    .signal-box.buy { border-color: #00ff88; }
+    .signal-box.strong-sell { border-color: #ff4757; background: rgba(255, 71, 87, 0.1); }
+    .signal-box.sell { border-color: #ff4757; }
+    .signal-box.hold { border-color: #555; }
+
+    .signal-type {
+      font-size: 0.75em;
+      color: #aaa;
+      text-transform: uppercase;
+      margin-bottom: 5px;
+    }
+
+    .signal-action {
+      font-size: 1.1em;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .signal-conf {
+      font-size: 0.8em;
+      color: #888;
+    }
+
+    .signal-acc {
+      font-size: 0.75em;
+      color: #4facfe;
+      margin-top: 3px;
+    }
+
+    .whale-info {
+      background: rgba(255, 193, 7, 0.1);
+      border: 1px solid rgba(255, 193, 7, 0.3);
+      padding: 10px;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      font-size: 0.9em;
+    }
+
+    .whale-info .whale-icon {
+      font-size: 1.2em;
+      margin-right: 5px;
+    }
+
+    .trap-warning {
+      background: rgba(255, 71, 87, 0.15);
+      border: 1px solid rgba(255, 71, 87, 0.5);
+      padding: 10px;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      font-size: 0.9em;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.7; }
+    }
+
+    .trap-warning .warning-icon {
+      font-size: 1.2em;
+      margin-right: 5px;
+    }
+
+    .indicators {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+      margin-top: 10px;
+      font-size: 0.85em;
+    }
+
+    .indicator {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 8px;
+      border-radius: 6px;
+    }
+
+    .indicator .label {
+      color: #aaa;
+      margin-right: 5px;
+    }
+
+    .indicator .value {
+      font-weight: bold;
+      color: #4facfe;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 30px;
+      padding: 20px;
+      color: #888;
+      font-size: 0.9em;
+    }
+
+    .loading {
+      text-align: center;
+      padding: 50px;
+      font-size: 1.5em;
+      color: #4facfe;
+    }
+
+    .connected {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      background: #00ff88;
+      border-radius: 50%;
+      margin-right: 8px;
+      animation: blink 1.5s infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>🚀 Crypto Trading Analyzer V2</h1>
+    <p class="subtitle">
+      <span class="connected"></span>
+      Essential Indicators • Whale Detection • Anti-Trap • Signal Categorization
+    </p>
+  </div>
+
+  <div class="stats" id="stats">
+    <div class="stat-card">
+      <div class="label">Paper Balance</div>
+      <div class="value">$10,000</div>
+    </div>
+    <div class="stat-card">
+      <div class="label">Open Positions</div>
+      <div class="value">0</div>
+    </div>
+    <div class="stat-card">
+      <div class="label">Win Rate</div>
+      <div class="value">0%</div>
+    </div>
+    <div class="stat-card">
+      <div class="label">Total P&L</div>
+      <div class="value">$0</div>
+    </div>
+  </div>
+
+  <div class="summary" id="summary">
+    <div class="summary-card">
+      <h3>📊 Scalping (1m-5m)</h3>
+      <div class="counts">
+        <div class="count-item">
+          <div class="number buy">0</div>
+          <div class="label">BUY</div>
+        </div>
+        <div class="count-item">
+          <div class="number sell">0</div>
+          <div class="label">SELL</div>
+        </div>
+        <div class="count-item">
+          <div class="number hold">0</div>
+          <div class="label">HOLD</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="summary-card">
+      <h3>📈 Intraday (15m-1h)</h3>
+      <div class="counts">
+        <div class="count-item">
+          <div class="number buy">0</div>
+          <div class="label">BUY</div>
+        </div>
+        <div class="count-item">
+          <div class="number sell">0</div>
+          <div class="label">SELL</div>
+        </div>
+        <div class="count-item">
+          <div class="number hold">0</div>
+          <div class="label">HOLD</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="summary-card">
+      <h3>📉 Swing (4h-1D)</h3>
+      <div class="counts">
+        <div class="count-item">
+          <div class="number buy">0</div>
+          <div class="label">BUY</div>
+        </div>
+        <div class="count-item">
+          <div class="number sell">0</div>
+          <div class="label">SELL</div>
+        </div>
+        <div class="count-item">
+          <div class="number hold">0</div>
+          <div class="label">HOLD</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="loading" id="loading">
+    ⏳ Connecting to trading system...
+  </div>
+
+  <div class="symbols-container" id="symbols" style="display: none;">
+  </div>
+
+  <div class="footer">
+    <p>🎯 Target Accuracy: 90-95% | Essential Indicators Only | Real-time Analysis</p>
+    <p style="margin-top: 10px; font-size: 0.85em;">RSI • EMA • MACD • CVD • Footprint • Whale Detection • Anti-Trap</p>
+  </div>
+
+  <script>
+    const ws = new WebSocket(`ws://${window.location.host}`);
+
+    ws.onopen = () => {
+      console.log('✅ Connected to server');
+      document.getElementById('loading').style.display = 'none';
+      document.getElementById('symbols').style.display = 'grid';
+    };
+
+    ws.onmessage = (event) => {
+      const message = JSON.parse(event.data);
+
+      if (message.type === 'analysis') {
+        updateAnalysis(message.data);
+      } else if (message.type === 'performance') {
+        updateStats(message.data);
+      }
+    };
+
+    ws.onerror = (error) => {
+      console.error('WebSocket error:', error);
+    };
+
+    ws.onclose = () => {
+      console.log('❌ Disconnected from server');
+      document.getElementById('loading').innerHTML = '⚠️ Disconnected. Reconnecting...';
+      document.getElementById('loading').style.display = 'block';
+      setTimeout(() => location.reload(), 5000);
+    };
+
+    function updateStats(data) {
+      const balance = data.balance || 10000;
+      const openPositions = data.openPositions?.length || 0;
+      const winRate = data.stats?.winRate || 0;
+      const totalPnL = data.stats?.totalPnL || 0;
+
+      document.querySelector('.stats').innerHTML = `
+        <div class="stat-card">
+          <div class="label">Paper Balance</div>
+          <div class="value">$${balance.toFixed(2)}</div>
+        </div>
+        <div class="stat-card">
+          <div class="label">Open Positions</div>
+          <div class="value">${openPositions}</div>
+        </div>
+        <div class="stat-card">
+          <div class="label">Win Rate</div>
+          <div class="value">${winRate.toFixed(1)}%</div>
+        </div>
+        <div class="stat-card">
+          <div class="label">Total P&L</div>
+          <div class="value" style="color: ${totalPnL >= 0 ? '#00ff88' : '#ff4757'}">
+            ${totalPnL >= 0 ? '+' : ''}$${totalPnL.toFixed(2)}
+          </div>
+        </div>
+      `;
+    }
+
+    function updateAnalysis(results) {
+      // Update summary counts
+      let scalpBuy = 0, scalpSell = 0, scalpHold = 0;
+      let intraBuy = 0, intraSell = 0, intraHold = 0;
+      let swingBuy = 0, swingSell = 0, swingHold = 0;
+
+      results.forEach(r => {
+        if (r.signals.scalping.action.includes('BUY')) scalpBuy++;
+        else if (r.signals.scalping.action.includes('SELL')) scalpSell++;
+        else scalpHold++;
+
+        if (r.signals.intraday.action.includes('BUY')) intraBuy++;
+        else if (r.signals.intraday.action.includes('SELL')) intraSell++;
+        else intraHold++;
+
+        if (r.signals.swing.action.includes('BUY')) swingBuy++;
+        else if (r.signals.swing.action.includes('SELL')) swingSell++;
+        else swingHold++;
+      });
+
+      document.querySelector('.summary').innerHTML = `
+        <div class="summary-card">
+          <h3>📊 Scalping (1m-5m)</h3>
+          <div class="counts">
+            <div class="count-item">
+              <div class="number buy">${scalpBuy}</div>
+              <div class="label">BUY</div>
+            </div>
+            <div class="count-item">
+              <div class="number sell">${scalpSell}</div>
+              <div class="label">SELL</div>
+            </div>
+            <div class="count-item">
+              <div class="number hold">${scalpHold}</div>
+              <div class="label">HOLD</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="summary-card">
+          <h3>📈 Intraday (15m-1h)</h3>
+          <div class="counts">
+            <div class="count-item">
+              <div class="number buy">${intraBuy}</div>
+              <div class="label">BUY</div>
+            </div>
+            <div class="count-item">
+              <div class="number sell">${intraSell}</div>
+              <div class="label">SELL</div>
+            </div>
+            <div class="count-item">
+              <div class="number hold">${intraHold}</div>
+              <div class="label">HOLD</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="summary-card">
+          <h3>📉 Swing (4h-1D)</h3>
+          <div class="counts">
+            <div class="count-item">
+              <div class="number buy">${swingBuy}</div>
+              <div class="label">BUY</div>
+            </div>
+            <div class="count-item">
+              <div class="number sell">${swingSell}</div>
+              <div class="label">SELL</div>
+            </div>
+            <div class="count-item">
+              <div class="number hold">${swingHold}</div>
+              <div class="label">HOLD</div>
+            </div>
+          </div>
+        </div>
+      `;
+
+      // Update symbols
+      const container = document.getElementById('symbols');
+      container.innerHTML = results.map(r => createSymbolCard(r)).join('');
+    }
+
+    function createSymbolCard(result) {
+      const { symbol, analysis, signals } = result;
+      const { scalping, intraday, swing, antiTrap, whaleActivity } = signals;
+
+      const priceChangeClass = analysis.priceChange24h >= 0 ? 'buy' : 'sell';
+
+      // Trap warning HTML
+      const trapHTML = antiTrap?.detected ? `
+        <div class="trap-warning">
+          <span class="warning-icon">⚠️</span>
+          <strong>TRAP DETECTED:</strong> ${antiTrap.count} trap(s) - ${antiTrap.traps[0]?.type}
+        </div>
+      ` : '';
+
+      // Whale activity HTML
+      const whaleHTML = whaleActivity ? `
+        <div class="whale-info">
+          <span class="whale-icon">🐋</span>
+          <strong>${whaleActivity.control}</strong> | Nearby Orders: ${whaleActivity.whaleOrdersNearby}
+        </div>
+      ` : '';
+
+      return `
+        <div class="symbol-card">
+          <div class="symbol-header">
+            <div class="symbol-name">${symbol}</div>
+            <div class="price-info">
+              <div class="price">$${analysis.price.toFixed(4)}</div>
+              <div class="price-change ${priceChangeClass}">
+                ${analysis.priceChange24h >= 0 ? '▲' : '▼'} ${Math.abs(analysis.priceChange24h).toFixed(2)}%
+              </div>
+            </div>
+          </div>
+
+          ${trapHTML}
+          ${whaleHTML}
+
+          <div class="signals-grid">
+            ${createSignalBox(scalping)}
+            ${createSignalBox(intraday)}
+            ${createSignalBox(swing)}
+          </div>
+
+          <div class="indicators">
+            <div class="indicator">
+              <span class="label">RSI:</span>
+              <span class="value">${analysis.rsi.toFixed(1)}</span>
+            </div>
+            <div class="indicator">
+              <span class="label">CVD:</span>
+              <span class="value">${analysis.cvd.pressure}</span>
+            </div>
+            <div class="indicator">
+              <span class="label">MACD:</span>
+              <span class="value">${analysis.macd.histogram > 0 ? '🟢 Bull' : '🔴 Bear'}</span>
+            </div>
+            <div class="indicator">
+              <span class="label">EMA Trend:</span>
+              <span class="value">${analysis.price > analysis.ema20 ? '🟢 Up' : '🔴 Down'}</span>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    function createSignalBox(signal) {
+      const actionClass = signal.action.includes('STRONG BUY') ? 'strong-buy' :
+                         signal.action.includes('BUY') ? 'buy' :
+                         signal.action.includes('STRONG SELL') ? 'strong-sell' :
+                         signal.action.includes('SELL') ? 'sell' : 'hold';
+
+      const actionColor = signal.action.includes('BUY') ? '#00ff88' :
+                         signal.action.includes('SELL') ? '#ff4757' : '#aaa';
+
+      return `
+        <div class="signal-box ${actionClass}">
+          <div class="signal-type">${signal.type}</div>
+          <div class="signal-action" style="color: ${actionColor}">${signal.action}</div>
+          <div class="signal-conf">${signal.confidence}</div>
+          <div class="signal-acc">Acc: ${signal.accuracy}</div>
+        </div>
+      `;
+    }
+  </script>
+</body>
+</html>
